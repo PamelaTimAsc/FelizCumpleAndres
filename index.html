@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Feliz Cumpleaños!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Pantalla de Bienvenida -->
+    <div id="welcome-screen" class="screen">
+        <div class="welcome-content">
+            <div class="envelope">
+                <div class="envelope-flap"></div>
+                <div class="envelope-body">
+                    <div class="confetti">
+                        <div class="confetti-piece"></div>
+                        <div class="confetti-piece"></div>
+                        <div class="confetti-piece"></div>
+                    </div>
+                </div>
+            </div>
+            <h1 class="welcome-title">¡Andres, tienes un mensaje especial!</h1>
+            <p class="welcome-text">Alguien ha preparado un detalle por tu cumpleaños 🎁</p>
+            <button id="open-letter" class="btn pulse">
+                <span class="btn-text">Abrir Carta</span>
+                <span class="btn-icon">✉️</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Carta -->
+    <div id="letter" class="letter-container hidden">
+        <div class="letter">
+            <div class="letter-content">
+                <h2>¡Feliz Cumpleaños!</h2>
+                <div class="video-container">
+                    <video id="birthday-video" controls autoplay muted loop>
+                        <source src="Cumple.mp4" type="video/mp4">
+                        Tu navegador no soporta el elemento de video.
+                    </video>
+                </div>
+                
+                <div class="surprise-buttons">
+                    <button id="show-photo" class="btn surprise-btn">📸 Foto Especial</button>
+                    <button id="show-message" class="btn surprise-btn">💌 Mensaje Especial</button>
+                </div>
+                
+                <div id="photo-container" class="hidden">
+                    <img id="surprise-photo" src="24.png" alt="Foto sorpresa" class="surprise-photo">
+                    <p>¡Felices 24, amor! Cada año más guapo y más mío.<br>¡Espero estar a tu lado en tu próximo cumpleaños!❤️</p>
+                </div>
+                
+                <div id="special-message" class="hidden">
+                    <p>Eres una persona maravillosa, con un corazón tan grande como tu cabeza de melocotón, y con unas ganas increíbles de salir adelante y cumplir todo lo que te propones. Te mereces lo mejor en este día tan especial. ¡Que todos tus sueños se sigan haciendo realidad! Gracias por dejarme ser parte de tu vida y por permitirme celebrar contigo, aunque sea a la distancia.<br>¡Feliz cumpleaños, amorcito de mi vida! 🎉🎂</p>
+                </div>
+                
+                <p class="signature">Con amor,<br>Pamela</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio -->
+    <audio id="bg-music" loop>
+        <source src="Superman.mp3" type="audio/mp3">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+
+    <script>
+    document.addEventListener('click', function() {
+    let audio = document.getElementById('bg-music');
+    audio.play();
+    }, { once: true });
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
